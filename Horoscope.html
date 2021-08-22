@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+<head>
+    <script>
+        var getName = null;
+        var getPassword = null;
+        var i = 0;
+        var getMonth = null;
+        var getDay = null;
+
+        while (getName === null || !isNaN(getName)) {
+            getName = prompt("What is your name ? ");
+
+            if (getName === null || !isNaN(getName)) {
+                alert("Invalid name, please try again");
+            } else {
+                document.write("Hello ", getName);
+            }
+        }
+
+        while (getPassword === null || getPassword != '123') {
+            getPassword = prompt("What is your Password ? ");
+            if (i === 3) {
+                alert('You Entered the Password Wrong 3 Times')
+                i = 0;
+            }
+            if (getPassword === null || getPassword != '123') {
+                alert("Invalid Password, please try again");
+                i++;
+            } 
+        }
+
+        while (getMonth === null || (isNaN(getMonth) || getMonth < 1) || (getMonth > 12)) {
+            getMonth = prompt("What is your Birth Month ? ");
+
+            if (getMonth === null || (isNaN(getMonth) || getMonth < 1) || (getMonth > 12)) {
+                alert("Invalid Birth Month, please try again");
+            }   
+        }
+
+        while (getDay === null || ((isNaN(getDay) || getDay < 1) || (getDay > 30))) {
+            getDay = prompt("What is your Birth Day ? ");
+
+            if (getDay === null || ((isNaN(getDay) || getDay < 1) || (getDay > 30))) {
+                alert("Invalid Birth Day, please try again");
+            } else {
+
+                if ((getMonth == 1 && getDay <= 20) || (getMonth == 12 && getDay >= 22)) {
+                    alert('capricorn');
+                } else if ((getMonth == 1 && getDay >= 21) || (getMonth == 2 && getDay <= 18)) {
+                    alert('aquarius');
+
+                } else if ((getMonth == 2 && getDay >= 19) || (getMonth == 3 && getDay <= 20)) {
+                    alert('pisces');
+
+                } else if ((getMonth == 3 && getDay >= 21) || (getMonth == 4 && getDay <= 20)) {
+                    alert('aries');
+
+                } else if ((getMonth == 4 && getDay >= 21) || (getMonth == 5 && getDay <= 20)) {
+                    alert('taurus');
+
+                } else if ((getMonth == 5 && getDay >= 21) || (getMonth == 6 && getDay <= 20)) {
+                    alert('gemini');
+
+                } else if ((getMonth == 6 && getDay >= 22) || (getMonth == 7 && getDay <= 22)) {
+                    alert('cancer');
+
+                } else if ((getMonth == 7 && getDay >= 23) || (getMonth == 8 && getDay <= 23)) {
+                    alert('leo');
+                } else if ((getMonth == 8 && getDay >= 24) || (getMonth == 9 && getDay <= 23)) {
+                    alert('virgo');
+
+                } else if ((getMonth == 9 && getDay >= 24) || (getMonth == 10 && getDay <= 23)) {
+                    alert('libra');
+
+                } else if ((getMonth == 10 && getDay >= 24) || (getMonth == 11 && getDay <= 22)) {
+                    alert('scorpio');
+
+                } else if ((getMonth == 11 && getDay >= 23) || (getMonth == 12 && getDay <= 21)) {
+                    alert('sagittarius');
+
+                }
+
+            }
+        }
+
+
+
+       
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
